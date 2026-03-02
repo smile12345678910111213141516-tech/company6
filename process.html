@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process | Repowering Partners</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-background: #11151C;
+            --color-text: #EAEAEA;
+            --color-text-muted: #8992A1;
+            --color-accent: #B49B6F;
+            --color-surface: #1A202C;
+            --color-border: #2D3748;
+
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+            
+            --transition-fast: 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+            --transition-slow: 600ms cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        /* --- Base & Reset --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            font-weight: 300;
+            line-height: 1.7;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            cursor: none;
+        }
+        
+        /* --- Custom Cursor --- */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--color-text);
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: width 150ms ease, height 150ms ease, background-color 150ms ease, border-color 150ms ease;
+            z-index: 9999;
+            mix-blend-mode: difference;
+        }
+
+        .cursor.hovered {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+        
+        .cursor-dot {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background-color: var(--color-text);
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            mix-blend-mode: difference;
+        }
+
+        a, button {
+            cursor: none;
+        }
+
+        /* --- Typography & Layout --- */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0;
+            color: var(--color-text);
+        }
+
+        h1 { font-size: 5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 3.5rem; }
+        h3 { font-size: 1.25rem; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); }
+
+        p {
+            max-width: 60ch;
+            margin: 1rem 0 0 0;
+            font-size: 1.1rem;
+        }
+        
+        /* --- Scroll Animations --- */
+        .reveal {
+            opacity: 0;
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        /* --- Header --- */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 30px 0;
+            background: linear-gradient(to bottom, var(--color-background) 0%, rgba(17, 21, 28, 0) 100%);
+        }
+        
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--color-text);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+        .logo span { color: var(--color-accent); }
+
+        .main-nav a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: color var(--transition-fast);
+        }
+        .main-nav a.active { color: var(--color-text); }
+        .main-nav a:hover { color: var(--color-text); }
+        
+        /* --- Page Hero --- */
+        .page-hero {
+            padding-top: 200px;
+            padding-bottom: 120px;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            max-width: 15ch;
+            margin: 0 auto;
+        }
+
+        .page-hero p {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            max-width: 50ch;
+            margin: 2rem auto 0 auto;
+        }
+
+        /* --- Process Timeline --- */
+        .process-timeline {
+            position: relative;
+            padding: 80px 0 120px;
+        }
+        
+        /* The main vertical line */
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            background-color: var(--color-border);
+            z-index: 1;
+        }
+
+        .timeline-step {
+            display: grid;
+            grid-template-columns: 1fr 80px 1fr;
+            align-items: start;
+            position: relative;
+            margin-bottom: 100px;
+        }
+        
+        /* The dot on the timeline */
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--color-surface);
+            border: 2px solid var(--color-accent);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            padding: 20px 40px;
+        }
+        
+        .timeline-content .step-number {
+            font-family: var(--font-display);
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+        
+        .timeline-content h2 {
+            margin: 1rem 0;
+        }
+        
+        .timeline-content .key-points {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0 0;
+            border-top: 1px solid var(--color-border);
+            padding-top: 2rem;
+        }
+        
+        .key-points li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 1rem;
+            color: var(--color-text-muted);
+        }
+        
+        /* Custom bullet point */
+        .key-points li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            top: -2px;
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        .timeline-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.1) brightness(0.7);
+        }
+
+        /* Alternating layout */
+        .timeline-step:nth-child(odd) .timeline-content {
+            grid-column: 1 / 2;
+            text-align: right;
+        }
+        .timeline-step:nth-child(odd) .timeline-image {
+            grid-column: 3 / 4;
+        }
+        .timeline-step:nth-child(odd) .reveal-left {
+            transform: translateX(-40px);
+        }
+        .timeline-step:nth-child(odd) .reveal-right {
+            transform: translateX(40px);
+        }
+
+        .timeline-step:nth-child(even) .timeline-content {
+            grid-column: 3 / 4;
+            text-align: left;
+        }
+        .timeline-step:nth-child(even) .timeline-image {
+            grid-column: 1 / 2;
+        }
+         .timeline-step:nth-child(even) .reveal-left {
+            transform: translateX(-40px);
+        }
+        .timeline-step:nth-child(even) .reveal-right {
+            transform: translateX(40px);
+        }
+
+        /* --- Footer --- */
+        .main-footer {
+            padding: 60px 0;
+            background-color: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .footer-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color var(--transition-fast);
+        }
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            h1 { font-size: 4rem; }
+            h2 { font-size: 2.5rem; }
+            
+            .process-timeline::before { left: 20px; }
+            .timeline-step::before { left: 20px; }
+
+            .timeline-step {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 60px;
+            }
+            .timeline-step:nth-child(odd) .timeline-content,
+            .timeline-step:nth-child(even) .timeline-content {
+                text-align: left;
+                padding-left: 60px;
+                order: 1;
+            }
+            .timeline-step:nth-child(odd) .timeline-image,
+            .timeline-step:nth-child(even) .timeline-image {
+                order: 2;
+                margin-top: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .page-hero { padding-top: 120px; padding-bottom: 80px; }
+            .container { padding: 0 20px; }
+            .main-nav { display: none; }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">Repowering<span>.</span>Partners</a>
+            <nav class="main-nav">
+                <a href="process.html" class="active">Process</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="reveal">Our Refined Process</h1>
+                <p class="reveal" style="transition-delay: 150ms;">A disciplined, three-stage methodology designed for maximum value and minimum friction, from initial contact to final repowering.</p>
+            </div>
+        </section>
+
+        <section class="process-timeline">
+            <div class="container">
+                
+                <!-- Step 1: Valuation -->
+                <div class="timeline-step">
+                    <div class="timeline-content reveal reveal-left">
+                        <div class="step-number">01</div>
+                        <h3>Stage One</h3>
+                        <h2>Expert Valuation</h2>
+                        <p>Our process begins with a deep, data-driven analysis of your asset. We go beyond surface-level metrics to understand the true operational and financial potential locked within your solar farm.</p>
+                        <ul class="key-points">
+                            <li>Proprietary performance modeling</li>
+                            <li>In-depth equipment lifecycle analysis</li>
+                            <li>Regulatory and interconnection review</li>
+                            <li>Transparent, market-based financial assessment</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-image-wrapper reveal reveal-right" style="transition-delay: 150ms;">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2400&auto=format&fit=crop" alt="Analyst reviewing data on multiple computer screens." class="timeline-image">
+                    </div>
+                </div>
+
+                <!-- Step 2: Acquisition -->
+                <div class="timeline-step">
+                    <div class="timeline-image-wrapper reveal reveal-left" style="transition-delay: 150ms;">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4b248e?q=80&w=2400&auto=format&fit=crop" alt="Two professionals shaking hands over a desk with documents." class="timeline-image">
+                    </div>
+                    <div class="timeline-content reveal reveal-right">
+                        <div class="step-number">02</div>
+                        <h3>Stage Two</h3>
+                        <h2>Seamless Acquisition</h2>
+                        <p>We prioritize a swift and discreet acquisition process. Our dedicated legal and financial teams manage every detail, ensuring a seamless transition of ownership that respects your time and confidentiality.</p>
+                        <ul class="key-points">
+                            <li>Streamlined due diligence protocol</li>
+                            <li>Flexible deal structuring</li>
+                            <li>Dedicated single point of contact</li>
+                            <li>Guaranteed confidentiality and efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3: Repowering -->
+                <div class="timeline-step">
+                    <div class="timeline-content reveal reveal-left">
+                        <div class="step-number">03</div>
+                        <h3>Stage Three</h3>
+                        <h2>Strategic Repowering</h2>
+                        <p>Post-acquisition, we inject new life into the asset. By deploying next-generation technology and optimizing operational strategies, we enhance performance, extend longevity, and increase output for the grid.</p>
+                        <ul class="key-points">
+                            <li>Module and inverter technology upgrades</li>
+                            <li>Advanced monitoring and O&M integration</li>
+                            <li>Grid services and storage augmentation</li>
+                            <li>Long-term asset management plan</li>
+                        </ul>
+                    </div>
+                     <div class="timeline-image-wrapper reveal reveal-right" style="transition-delay: 150ms;">
+                        <img src="https://images.unsplash.com/photo-1542978713-1376481745b6?q=80&w=2400&auto=format&fit=crop" alt="Engineer in a hard hat working on solar farm equipment." class="timeline-image">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Repowering Partners. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom Cursor
+            const cursor = document.querySelector('.cursor');
+            const cursorDot = document.querySelector('.cursor-dot');
+            const hoverables = document.querySelectorAll('a, button');
+
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+
+            hoverables.forEach(el => {
+                el.addEventListener('mouseover', () => { cursor.classList.add('hovered'); });
+                el.addEventListener('mouseout', () => { cursor.classList.remove('hovered'); });
+            });
+
+            // Scroll Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
