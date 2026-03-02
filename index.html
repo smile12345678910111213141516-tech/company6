@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repowering Partners | Acquiring and Revitalizing Solar Infrastructure</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-background: #11151C;
+            --color-text: #EAEAEA;
+            --color-text-muted: #8992A1;
+            --color-accent: #B49B6F;
+            --color-surface: #1A202C;
+            --color-border: #2D3748;
+
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Lato', sans-serif;
+            
+            --transition-fast: 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+            --transition-slow: 600ms cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        /* --- Base & Reset --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            font-weight: 300;
+            line-height: 1.7;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            cursor: none;
+        }
+        
+        /* --- Custom Cursor --- */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--color-text);
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: width 150ms ease, height 150ms ease, background-color 150ms ease, border-color 150ms ease;
+            z-index: 9999;
+            mix-blend-mode: difference;
+        }
+
+        .cursor.hovered {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+        
+        .cursor-dot {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background-color: var(--color-text);
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            mix-blend-mode: difference;
+        }
+
+        a, button {
+            cursor: none;
+        }
+
+        /* --- Typography & Layout --- */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 120px 0;
+            overflow: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0;
+            color: var(--color-text);
+        }
+
+        h1 { font-size: 6rem; letter-spacing: -0.02em; }
+        h2 { font-size: 4rem; }
+        h3 { font-size: 2rem; }
+
+        p {
+            max-width: 60ch;
+            margin: 1rem 0 0 0;
+            font-size: 1.1rem;
+        }
+
+        /* --- Scroll Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Header --- */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 30px 0;
+            background: linear-gradient(to bottom, var(--color-background) 0%, rgba(17, 21, 28, 0) 100%);
+        }
+        
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--color-text);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+        .logo span { color: var(--color-accent); }
+
+        .main-nav a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: color var(--transition-fast);
+        }
+        .main-nav a:hover { color: var(--color-text); }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding-top: 220px;
+            padding-bottom: 160px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content {
+            width: 55%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image-wrapper {
+            position: absolute;
+            top: 10%;
+            right: -5%;
+            width: 60%;
+            height: 80%;
+            z-index: 1;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(80%) brightness(0.6);
+            transition: filter var(--transition-slow);
+        }
+        .hero-image-wrapper:hover .hero-image {
+            filter: grayscale(0%) brightness(0.8);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-background);
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-decoration: none;
+            padding: 18px 36px;
+            border-radius: 2px;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            border: none;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- Process Section --- */
+        .process-grid {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+            border-top: 1px solid var(--color-border);
+            padding-top: 80px;
+        }
+
+        .process-step {
+            position: relative;
+        }
+        
+        .step-number {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+
+        .process-step h3 {
+            margin: 1rem 0;
+            color: var(--color-text);
+        }
+
+        .process-step p {
+            color: var(--color-text-muted);
+            font-size: 1rem;
+        }
+        
+        /* --- About Section --- */
+        .about-section {
+            background-color: var(--color-surface);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            margin-bottom: 2rem;
+        }
+
+        /* --- CTA Section --- */
+        .cta-section {
+            text-align: center;
+        }
+        .cta-section h2 {
+            max-width: 20ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-section p {
+            max-width: 50ch;
+            margin: 2rem auto 3rem auto;
+            color: var(--color-text-muted);
+        }
+
+        /* --- Footer --- */
+        .main-footer {
+            padding: 60px 0;
+            background-color: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .footer-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 1200px) {
+            h1 { font-size: 5rem; }
+            h2 { font-size: 3rem; }
+        }
+
+        @media (max-width: 992px) {
+            h1 { font-size: 4rem; }
+            .hero-content { width: 100%; text-align: center; }
+            .hero-image-wrapper { display: none; }
+            .process-grid { grid-template-columns: 1fr; gap: 60px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image { height: 400px; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.5rem; }
+            .main-nav { display: none; }
+            section { padding: 80px 0; }
+            .container { padding: 0 20px; }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">Repowering<span>.</span>Partners</a>
+            <nav class="main-nav">
+                <a href="#process">Process</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="reveal">Unlock The Future Value of Your Solar Assets.</h1>
+                    <p class="reveal" style="transition-delay: 150ms;">We acquire and revitalize existing solar farms, providing a seamless exit for owners and powering the next generation of clean energy.</p>
+                    <a href="#contact" class="btn reveal" style="transition-delay: 300ms;">Begin Valuation</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper reveal" style="transition-delay: 200ms;">
+                <img src="https://images.unsplash.com/photo-1599781285218-f2a89855543c?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="A sprawling solar farm under a clear blue sky." class="hero-image">
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process">
+            <div class="container">
+                <div class="process-grid">
+                    <div class="process-step reveal">
+                        <div class="step-number">01</div>
+                        <h3>Expert Valuation</h3>
+                        <p>We leverage proprietary data and deep market expertise to provide a transparent, comprehensive valuation of your solar assets.</p>
+                    </div>
+                    <div class="process-step reveal" style="transition-delay: 150ms;">
+                        <div class="step-number">02</div>
+                        <h3>Seamless Acquisition</h3>
+                        <p>Our streamlined process ensures a swift, confidential, and efficient transfer of ownership with minimal disruption to your operations.</p>
+                    </div>
+                    <div class="process-step reveal" style="transition-delay: 300ms;">
+                        <div class="step-number">03</div>
+                        <h3>Strategic Repowering</h3>
+                        <p>We invest in the future by upgrading technology and optimizing performance, extending the life and output of the infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content reveal">
+                        <h2>Experience Meets<br>Innovation.</h2>
+                        <p>Repowering Partners was founded by a team of energy sector veterans and financial experts. We saw a critical need in the market: a dedicated partner for owners of maturing solar assets. Our unique approach combines the financial acumen of an investment firm with the technical know-how of an engineering powerhouse, creating unparalleled value for our partners and the grid.</p>
+                    </div>
+                    <div class="about-image-wrapper reveal" style="transition-delay: 150ms;">
+                        <img src="https://images.unsplash.com/photo-1509870925592-d67b587a2713?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Close-up detail of a solar panel reflecting the sun." class="about-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <h2 class="reveal">Ready to Realize Your Asset’s Full Potential?</h2>
+                <p class="reveal" style="transition-delay: 150ms;">Contact our acquisitions team today for a confidential consultation and discover the true value of your solar portfolio.</p>
+                <a href="mailto:contact@repowering.partners" class="btn reveal" style="transition-delay: 300ms;">Contact Our Team</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Repowering Partners. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom Cursor
+            const cursor = document.querySelector('.cursor');
+            const cursorDot = document.querySelector('.cursor-dot');
+            const hoverables = document.querySelectorAll('a, button');
+
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+
+            hoverables.forEach(el => {
+                el.addEventListener('mouseover', () => {
+                    cursor.classList.add('hovered');
+                });
+                el.addEventListener('mouseout', () => {
+                    cursor.classList.remove('hovered');
+                });
+            });
+
+            // Scroll Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
