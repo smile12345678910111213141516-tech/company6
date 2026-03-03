@@ -3,139 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Process | Repowering Partners</title>
-    <meta name="description" content="Our simple 4-step process for acquiring your solar farm. From submission to a fast, certain close.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F5A623'/%3E%3Cpath fill='%23FFFFFF' d='M58,25 L42,52 L55,52 L38,75 L62,45 L48,45 Z'/%3E%3C/svg%3E">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.6">
+    <title>How It Works | Repowering Partners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121212%22/><circle cx=%2250%22 cy=%2250%22 r=%2235%22 fill=%22%23D4B483%22/><path d=%22M50 10 L50 90 M10 50 L90 50 M22 22 L78 78 M22 78 L78 22%22 stroke=%22%23121212%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
 </head>
 <body>
+    <!-- Use same Nav as index.html -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">REPOWERING <span class="text-accent">PARTNERS</span></a>
+            <div class="nav-links">
+                <a href="how-it-works.html">Process</a>
+                <a href="why-us.html">Why Us</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-primary">Contact</a>
+            </div>
+             <!-- Hamburger logic handled by script.js -->
+             <div class="hamburger">
+                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
+                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
+                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="how-it-works.html" class="mobile-link">Process</a>
+        <a href="why-us.html" class="mobile-link">Why Us</a>
+        <a href="contact.html" class="mobile-link">Get an Offer</a>
+    </div>
 
-    <div id="spotlight"></div>
-
-    <header class="site-header">
-        <div class="container">
-            <a href="index.html" class="logo">RP.</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="how-it-works.html" class="active">How It Works</a></li>
-                    <li><a href="why-sell.html">Why Sell to Us</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="contact.html" class="btn btn-primary nav-cta">Contact</a>
-            <button class="hamburger-menu" aria-label="Open navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <!-- Page Header -->
+   <!-- Find the <header> tag and replace the style -->
+    <header class="page-header" style="background-image: url('media/the2.jpg');">
+        <div class="header-overlay"></div>
+        <div class="header-content fade-in">
+            <h1 class="header-title">The Acquisition Process</h1>
+            <p class="header-sub">Streamlined. Transparent. Efficient.</p>
         </div>
     </header>
 
-    <main>
-        <section class="page-header section-padding dark-section">
-            <div class="container fade-in">
-                <h1>How It Works</h1>
-                <p>A streamlined process designed for clarity, speed, and certainty.</p>
-            </div>
-        </section>
-
-        <section class="process-steps section-padding">
-            <div class="container">
-                <div class="process-step-item fade-in-scroll">
-                    <div class="process-step-content">
-                        <span class="step-number-large">01.</span>
-                        <h2>Submit Your Project Details</h2>
-                        <p>Begin by providing high-level information about your solar project via our confidential contact form. Key details include project size (MW), location, and operational status. This initial submission is secure, private, and carries no obligation.</p>
-                        <a href="contact.html" class="btn btn-ghost">Submit Your Project →</a>
-                    </div>
-                    <div class="process-step-img">
-                         <img src="media/the1.avif" alt="A person working on a laptop showing data.">
-                    </div>
-                </div>
-
-                <div class="process-step-item reverse fade-in-scroll">
-                    <div class="process-step-content">
-                        <span class="step-number-large">02.</span>
-                        <h2>Confidential Evaluation</h2>
-                        <p>Our expert acquisitions team will review your submission. We may request additional information like Power Purchase Agreements (PPAs), lease agreements, and production data under a strict Non-Disclosure Agreement (NDA). We use this to perform a swift but thorough analysis of your asset's financial performance and operational health.</p>
-                    </div>
-                    <div class="process-step-img">
-                         <img src="media/the2.jpg" alt="Team reviewing financial charts.">
-                    </div>
-                </div>
-
-                <div class="process-step-item fade-in-scroll">
-                    <div class="process-step-content">
-                        <span class="step-number-large">03.</span>
-                        <h2>Receive a Formal Offer</h2>
-                        <p>Based on our analysis, we will present a formal, written cash offer. Crucially, our offers are not subject to financing contingencies. We have dedicated capital ready for deployment, which eliminates a major hurdle and source of uncertainty common in the market.</p>
-                    </div>
-                    <div class="process-step-img">
-                         <img src="https://source.unsplash.com/random/800x802/?document,signature,pen" alt="A formal document ready for signing.">
-                    </div>
-                </div>
-                
-                <div class="process-step-item reverse fade-in-scroll">
-                    <div class="process-step-content">
-                        <span class="step-number-large">04.</span>
-                        <h2>Due Diligence & Close</h2>
-                        <p>Upon acceptance of our offer, we enter a brief due diligence period to verify all project details. Our experienced team manages this process efficiently to ensure we meet our target closing timeline of 30-60 days. You receive your funds, and we take over as the new, responsible owner of the asset.</p>
-                    </div>
-                    <div class="process-step-img">
-                         <img src="https://source.unsplash.com/random/800x803/?handshake,deal,business" alt="A business handshake sealing a deal.">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FINAL CTA SECTION -->
-        <section class="final-cta dark-section">
-            <div class="container fade-in-scroll">
-                <h2>Begin Step One Today</h2>
-                <p>Submit your project details for a complimentary and confidential valuation.</p>
-                <a href="contact.html" class="btn btn-primary">Contact Us</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
+    <section class="section">
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-about">
-                    <a href="index.html" class="logo footer-logo">RP.</a>
-                    <p>Acquiring the future of energy, one solar farm at a time.</p>
+            <div class="process-vertical">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Submit Project Details</h3>
+                    <p style="color:var(--text-gray); max-width:600px;">Complete our secure intake form with basic metrics (Location, MW, Off-taker). We execute an NDA immediately if required.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Navigate</h4>
-                    <ul>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="why-sell.html">Why Sell to Us</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Valuation & LOI</h3>
+                    <p style="color:var(--text-gray); max-width:600px;">Our analysts review cash flows. We present a binding Letter of Intent (LOI) within 5 business days.</p>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><a href="mailto:Jim.bakhaus@repoweringpartners.com">Jim.bakhaus@repoweringpartners.com</a></p>
-                    <p><a href="tel:+18005551234">(800) 555-1234</a></p>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Targeted Diligence</h3>
+                    <p style="color:var(--text-gray); max-width:600px;">We conduct technical and legal review simultaneously to speed up the timeline.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Closing & Wiring</h3>
+                    <p style="color:var(--text-gray); max-width:600px;">We sign the APA and wire funds. Transaction complete.</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Repowering Partners. All Rights Reserved.</p>
+            <div style="margin-top:60px; text-align:center;">
+                <a href="contact.html" class="btn btn-primary">Start Step 1</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>&copy; 2025 Repowering Partners</div>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
             </div>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
