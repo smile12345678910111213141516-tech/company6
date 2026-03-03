@@ -294,6 +294,21 @@ input:focus, textarea:focus { outline: none; border-color: var(--accent-primary)
         grid-template-columns: 1fr; /* Stack everything */
         gap: 30px;
     }
+
+    /* Add this to style.css below .grid-3 */
+    .grid-4 { 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 30px; 
+    }
+
+    /* Add this to the Mobile/Tablet section at the bottom of style.css */
+    @media (max-width: 1024px) {
+        .grid-4 { grid-template-columns: repeat(2, 1fr); } /* 2x2 on tablets */
+    }
+    @media (max-width: 768px) {
+        .grid-4 { grid-template-columns: 1fr; } /* Stack on phones */
+    }
     
     /* Navigation */
     .nav-links { display: none; } /* Hide desktop nav */
