@@ -19,9 +19,9 @@
                 <a href="contact.html" class="btn btn-primary">Contact</a>
             </div>
              <div class="hamburger">
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
@@ -36,7 +36,7 @@
         <div class="container">
             <div class="grid-2">
                 <div class="fade-in-left">
-                    <h1 class="gradient-text" style="font-size:4rem; margin-bottom:20px;">CONTACT US</h1>
+                    <h1 style="font-size:4rem; margin-bottom:20px;">CONTACT US</h1>
                     <p style="color:var(--text-gray); margin-bottom:40px; font-size:1.1rem;">Submit your project details below. We will review the data and contact you within 24 hours to schedule a preliminary discussion.</p>
                     
                     <div style="margin-bottom:20px;">
@@ -49,26 +49,32 @@
                     </div>
                 </div>
 
-                <form id="offerForm" class="contact-form fade-in-up card-hover">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" required>
+                <div class="fade-in-right">
+                    <form id="offerForm" class="contact-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Work Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Project Size (MW)</label>
+                            <input type="number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Request Valuation</button>
+                    </form>
+                    <div id="successMessage" class="success-message" style="display:none;">
+                        <div class="success-icon">✔</div>
+                        <h3>Thank You</h3>
+                        <p>Your submission has been received. We'll be in touch within 24 hours.</p>
                     </div>
-                    <div class="form-group">
-                        <label>Work Email</label>
-                        <input type="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Project Size (MW)</label>
-                        <input type="number" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;">Request Valuation</button>
-                    <div id="successMessage" style="display:none; text-align:center; color: var(--accent-primary); margin-top: 20px;">Thank you. We will be in touch shortly.</div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
