@@ -35,14 +35,12 @@
     <section class="section" style="padding-top:150px;">
         <div class="container">
             <div class="grid-2">
-                <div>
-                    <!-- UPDATED HEADLINE -->
-                    <h1 style="font-size:4rem; margin-bottom:20px;">CONTACT US</h1>
+                <div class="fade-in-left">
+                    <h1 class="gradient-text" style="font-size:4rem; margin-bottom:20px;">CONTACT US</h1>
                     <p style="color:var(--text-gray); margin-bottom:40px; font-size:1.1rem;">Submit your project details below. We will review the data and contact you within 24 hours to schedule a preliminary discussion.</p>
                     
                     <div style="margin-bottom:20px;">
                         <span style="color:var(--accent-primary); font-size:0.9rem; font-weight:bold; display:block;">EMAIL</span>
-                        <!-- UPDATED EMAIL -->
                         <span style="font-size:1.2rem;">Jim.bakhaus@repoweringpartners.com</span>
                     </div>
                     <div>
@@ -51,7 +49,7 @@
                     </div>
                 </div>
 
-                <form id="offerForm" class="contact-form">
+                <form id="offerForm" class="contact-form fade-in-up card-hover">
                     <div class="form-group">
                         <label>Full Name</label>
                         <input type="text" required>
@@ -69,6 +67,7 @@
                         <input type="number" required>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width:100%;">Request Valuation</button>
+                    <div id="successMessage" style="display:none; text-align:center; color: var(--accent-primary); margin-top: 20px;">Thank you. We will be in touch shortly.</div>
                 </form>
             </div>
         </div>
