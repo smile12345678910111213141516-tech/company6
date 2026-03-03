@@ -3,66 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Repowering Partners</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121212%22/><circle cx=%2250%22 cy=%2250%22 r=%2235%22 fill=%22%23D4B483%22/><path d=%22M50 10 L50 90 M10 50 L90 50 M22 22 L78 78 M22 78 L78 22%22 stroke=%22%23121212%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
+    <title>About Us | Repowering Partners</title>
+    <meta name="description" content="Meet the experienced team behind Repowering Partners, dedicated to the professional acquisition of solar energy assets.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F5A623'/%3E%3Cpath fill='%23FFFFFF' d='M58,25 L42,52 L55,52 L38,75 L62,45 L48,45 Z'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1.6">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">REPOWERING <span class="text-accent">PARTNERS</span></a>
-            <div class="nav-links">
-                <a href="how-it-works.html">Process</a>
-                <a href="why-us.html">Why Us</a>
-                <a href="about.html">About</a>
-                <a href="contact.html" class="btn btn-primary">Contact</a>
-            </div>
-             <div class="hamburger">
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="how-it-works.html" class="mobile-link">Process</a>
-        <a href="why-us.html" class="mobile-link">Why Us</a>
-        <a href="contact.html" class="mobile-link">Get an Offer</a>
-    </div>
-    <!-- Find the <header> tag and replace the style -->
-    <header class="page-header" style="background-image: url('media/they.avif');">
-        <div class="header-overlay"></div>
-        <div class="header-content fade-in">
-            <h1 class="header-title">Our Mission</h1>
-            <p class="header-sub">Bridging the liquidity gap in clean energy infrastructure.</p>
+
+    <div id="spotlight"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">RP.</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="why-sell.html">Why Sell to Us</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary nav-cta">Contact</a>
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <section class="section">
-        <div class="container grid-2">
-            <div>
-                <h2 style="margin-bottom:20px;">Who We Are</h2>
-                <p style="color:var(--text-gray); margin-bottom:20px;">Repowering Partners was founded to solve a critical issue in the solar market: while development capital is abundant, liquidity for existing small-to-mid-utility scale projects is scarce.</p>
-                <p style="color:var(--text-gray);">Our team consists of energy finance veterans from major utilities and private equity firms. We understand the technical reality of solar assets and the financial needs of owners.</p>
+    <main>
+        <section class="page-header section-padding dark-section">
+            <div class="container fade-in">
+                <h1>Experts in Energy Asset Acquisition</h1>
+                <p>We are a dedicated team of finance, engineering, and energy professionals focused on one thing: buying solar farms.</p>
             </div>
-            <div>
-                <!-- Find the <img> tag in the About Section and replace the src -->
-                <img src="media/the.jpeg" style="width:100%; border:1px solid #333; height: 100%; object-fit: cover;" alt="Solar Operations">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div>&copy; 2025 Repowering Partners</div>
-            <div class="footer-links">
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
+        <section class="about-mission section-padding">
+            <div class="container grid-2">
+                <div class="fade-in-scroll">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to provide solar asset owners with a trusted, efficient, and profitable exit opportunity. We believe in the long-term value of renewable energy infrastructure and are committed to being responsible stewards of the projects we acquire. We handle every transaction with the professionalism and integrity that significant financial assets deserve.</p>
+                </div>
+                <div class="about-mission-img fade-in-scroll fade-delay-1">
+                    <img src="media/they.avif" alt="Aerial view of a large solar farm at sunset.">
+                </div>
+            </div>
+        </section>
+        
+        <section class="team-section section-padding dark-section">
+            <div class="container">
+                <div class="section-title text-center fade-in-scroll">
+                    <h2>Our Leadership Team</h2>
+                    <p>Decades of combined experience in finance, project development, and asset management.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member fade-in-scroll">
+                        <div class="team-member-img">
+                            <img src="https://source.unsplash.com/random/400x400/?portrait,man,professional" alt="Portrait of a team member.">
+                        </div>
+                        <h4>Jane Doe</h4>
+                        <p class="title">Managing Partner</p>
+                        <p class="bio">15+ years in infrastructure private equity with a focus on renewable energy portfolio acquisitions.</p>
+                    </div>
+                    <div class="team-member fade-in-scroll fade-delay-1">
+                        <div class="team-member-img">
+                            <img src="https://source.unsplash.com/random/400x401/?portrait,woman,professional" alt="Portrait of a team member.">
+                        </div>
+                        <h4>John Smith</h4>
+                        <p class="title">Head of Acquisitions</p>
+                        <p class="bio">Former solar project developer with deep expertise in asset valuation, due diligence, and transaction execution.</p>
+                    </div>
+                    <div class="team-member fade-in-scroll fade-delay-2">
+                         <div class="team-member-img">
+                            <img src="https://source.unsplash.com/random/400x402/?portrait,professional" alt="Portrait of a team member.">
+                        </div>
+                        <h4>Alex Johnson</h4>
+                        <p class="title">Director of Engineering</p>
+                        <p class="bio">Licensed Professional Engineer (PE) specializing in the operational analysis and optimization of utility-scale solar projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA SECTION -->
+        <section class="final-cta">
+            <div class="container fade-in-scroll">
+                <h2>Work With a Team You Can Trust</h2>
+                <p>Let our expertise guide you to a successful sale.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="index.html" class="logo footer-logo">RP.</a>
+                    <p>Acquiring the future of energy, one solar farm at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="why-sell.html">Why Sell to Us</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><a href="mailto:Jim.bakhaus@repoweringpartners.com">Jim.bakhaus@repoweringpartners.com</a></p>
+                    <p><a href="tel:+18005551234">(800) 555-1234</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Repowering Partners. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,86 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get an Offer | Repowering Partners</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121212%22/><circle cx=%2250%22 cy=%2250%22 r=%2235%22 fill=%22%23D4B483%22/><path d=%22M50 10 L50 90 M10 50 L90 50 M22 22 L78 78 M22 78 L78 22%22 stroke=%22%23121212%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
+    <title>Contact Us & Get an Offer | Repowering Partners</title>
+    <meta name="description" content="Contact Repowering Partners for a confidential, no-obligation offer on your solar farm.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F5A623'/%3E%3Cpath fill='%23FFFFFF' d='M58,25 L42,52 L55,52 L38,75 L62,45 L48,45 Z'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1.6">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">REPOWERING <span class="text-accent">PARTNERS</span></a>
-            <div class="nav-links">
-                <a href="how-it-works.html">Process</a>
-                <a href="why-us.html">Why Us</a>
-                <a href="about.html">About</a>
-                <a href="contact.html" class="btn btn-primary">Contact</a>
-            </div>
-             <div class="hamburger">
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="how-it-works.html" class="mobile-link">Process</a>
-        <a href="why-us.html" class="mobile-link">Why Us</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
-    </div>
 
-    <section class="section" style="padding-top:150px;">
+    <div id="spotlight"></div>
+
+    <header class="site-header">
         <div class="container">
-            <div class="grid-2">
-                <div>
-                    <!-- UPDATED HEADLINE -->
-                    <h1 style="font-size:4rem; margin-bottom:20px;">CONTACT US</h1>
-                    <p style="color:var(--text-gray); margin-bottom:40px; font-size:1.1rem;">Submit your project details below. We will review the data and contact you within 24 hours to schedule a preliminary discussion.</p>
-                    
-                    <div style="margin-bottom:20px;">
-                        <span style="color:var(--accent-primary); font-size:0.9rem; font-weight:bold; display:block;">EMAIL</span>
-                        <!-- UPDATED EMAIL -->
-                        <span style="font-size:1.2rem;">Jim.bakhaus@repoweringpartners.com</span>
+            <a href="index.html" class="logo">RP.</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="why-sell.html">Why Sell to Us</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary nav-cta">Contact</a>
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header section-padding dark-section">
+            <div class="container fade-in">
+                <h1>Contact Us</h1>
+                <p>Provide some basic details and our acquisitions team will contact you shortly. All submissions are strictly confidential.</p>
+            </div>
+        </section>
+
+        <section class="contact-page-section section-padding">
+            <div class="container contact-layout">
+                <div class="contact-form-container fade-in-scroll">
+                    <div id="form-success-message" style="display: none;">
+                        <h3>Thank You</h3>
+                        <p>Your submission has been received. Our team will review the details and be in touch with you shortly.</p>
+                        <a href="index.html" class="btn btn-ghost">Return Home</a>
                     </div>
-                    <div>
-                        <span style="color:var(--accent-primary); font-size:0.9rem; font-weight:bold; display:block;">PHONE</span>
-                        <span style="font-size:1.2rem;">+1 (212) 555-0198</span>
-                    </div>
+                    <form id="contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="project-size">Project Size (MW)</label>
+                                <input type="number" id="project-size" name="project-size" placeholder="e.g., 5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-location">Project Location (State)</label>
+                            <input type="text" id="project-location" name="project-location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                        </div>
+                    </form>
                 </div>
 
-                <form id="offerForm" class="contact-form">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" required>
+                <div class="contact-details-container fade-in-scroll fade-delay-1">
+                    <h3>Or Contact Us Directly</h3>
+                    <p>Prefer to speak with someone first? Reach out to our team.</p>
+                    <div class="contact-info-block">
+                        <h4>Email</h4>
+                        <a href="mailto:Jim.bakhaus@repoweringpartners.com">Jim.bakhaus@repoweringpartners.com</a>
                     </div>
-                    <div class="form-group">
-                        <label>Work Email</label>
-                        <input type="email" required>
+                    <div class="contact-info-block">
+                        <h4>Phone</h4>
+                        <a href="tel:+18005551234">(800) 555-1234</a>
                     </div>
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" required>
+                    <div class="contact-info-block">
+                        <h4>Our Promise</h4>
+                        <p>We guarantee 100% confidentiality. Your information will never be shared, and this inquiry places you under no obligation.</p>
                     </div>
-                    <div class="form-group">
-                        <label>Project Size (MW)</label>
-                        <input type="number" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;">Request Valuation</button>
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div>&copy; 2025 Repowering Partners</div>
-            <div class="footer-links">
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="index.html" class="logo footer-logo">RP.</a>
+                    <p>Acquiring the future of energy, one solar farm at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="why-sell.html">Why Sell to Us</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><a href="mailto:Jim.bakhaus@repoweringpartners.com">Jim.bakhaus@repoweringpartners.com</a></p>
+                    <p><a href="tel:+18005551234">(800) 555-1234</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Repowering Partners. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

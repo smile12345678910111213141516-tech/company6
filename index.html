@@ -3,96 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repowering Partners | Direct Solar Acquisition</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121212%22/><circle cx=%2250%22 cy=%2250%22 r=%2235%22 fill=%22%23D4B483%22/><path d=%22M50 10 L50 90 M10 50 L90 50 M22 22 L78 78 M22 78 L78 22%22 stroke=%22%23121212%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
+    <title>Repowering Partners | We Buy Solar Farms</title>
+    <meta name="description" content="Sell your solar farm directly to the buyer. Fast, certain, and confidential closings with Repowering Partners. Get a no-obligation offer today.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F5A623'/%3E%3Cpath fill='%23FFFFFF' d='M58,25 L42,52 L55,52 L38,75 L62,45 L48,45 Z'/%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1.6">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">REPOWERING <span class="text-accent">PARTNERS</span></a>
-            <div class="nav-links">
-                <a href="how-it-works.html">Process</a>
-                <a href="why-us.html">Why Us</a>
-                <a href="about.html">About</a>
-                <!-- UPDATED BUTTON TEXT -->
-                <a href="contact.html" class="btn btn-primary">Contact</a>
-            </div>
-            <div class="hamburger">
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-                <span style="display:block; width:30px; height:2px; background:#fff; margin:6px 0;"></span>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="how-it-works.html" class="mobile-link">Process</a>
-        <a href="why-us.html" class="mobile-link">Why Us</a>
-        <!-- UPDATED LINK TEXT -->
-        <a href="contact.html" class="mobile-link">Contact</a>
-    </div>
 
-    <!-- HOME HERO -->
-    <header class="hero">
-        <!-- UPDATED IMAGE PATH -->
-        <div class="hero-bg" style="background-image: url('media/the1.avif');"></div>
-        <div class="overlay"></div>
-        <div class="container hero-content fade-in">
-            <h1 class="hero-title">WE BUY <br><span class="text-accent">SOLAR FARMS.</span></h1>
-            <p style="font-size:1.2rem; color:#ccc; margin-bottom:30px;">Direct Liquidity. No Brokers. Certain Closing.</p>
-            <div>
-                <!-- UPDATED BUTTON TEXT -->
-                <a href="contact.html" class="btn btn-primary">Contact</a>
-                <a href="how-it-works.html" class="btn btn-ghost">Learn More</a>
-            </div>
-        </div>
-        <div class="trust-bar">
-            <div class="container trust-grid">
-                <div><span class="stat-number" data-target="250">0</span><span class="stat-symbol">M+</span><span class="stat-label">Deployed</span></div>
-                <div><span class="stat-number" data-target="45">0</span><span class="stat-label">Projects</span></div>
-                <div><span class="stat-number" data-target="60">0</span><span class="stat-symbol"> Days</span><span class="stat-label">Close Time</span></div>
-            </div>
+    <div id="spotlight"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">RP.</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="why-sell.html">Why Sell to Us</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary nav-cta">Contact</a>
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- VALUE PREVIEW (Emojis Removed) -->
-    <!-- VALUE PREVIEW (4 Cards) -->
-    <section class="section">
-        <div class="container">
-            <!-- Changed class from grid-3 to grid-4 -->
-            <div class="grid-4">
-                <div class="card">
-                    <h3>Direct Buyer</h3>
-                    <p style="color:var(--text-gray)">We buy onto our own balance sheet. You deal directly with the decision-makers.</p>
-                </div>
-                <div class="card">
-                    <h3>No Contingencies</h3>
-                    <p style="color:var(--text-gray)">No financing risks. When we sign an LOI, funds are committed.</p>
-                </div>
-                <div class="card">
-                    <h3>Confidential</h3>
-                    <p style="color:var(--text-gray)">A discreet process that protects your market relationships.</p>
-                </div>
-                <!-- NEW 4TH CARD -->
-                <div class="card">
-                    <h3>Proven Execution</h3>
-                    <p style="color:var(--text-gray)">Over 250MW deployed. We have the capital to close complex deals fast.</p>
+    <main class="page-home">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <h1 class="fade-in">We Buy Solar Farms.</h1>
+                <p class="fade-in fade-delay-1">Fast. Certain. Confidential. Sell your solar asset directly to an experienced buyer without broker fees or financing contingencies.</p>
+                <div class="hero-cta fade-in fade-delay-2">
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="how-it-works.html" class="btn btn-ghost">Learn Our Process</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div>&copy; 2025 Repowering Partners</div>
-            <div class="footer-links">
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
+        <!-- TRUST BAR SECTION -->
+        <section class="trust-bar dark-section">
+            <div class="container">
+                <div class="stat-item fade-in-scroll">
+                    <h3 class="counter" data-target="850">0</h3>
+                    <p>\$M+ in Acquisitions</p>
+                </div>
+                <div class="stat-item fade-in-scroll">
+                    <h3 class="counter" data-target="150">0</h3>
+                    <p>Projects Acquired</p>
+                </div>
+                <div class="stat-item fade-in-scroll">
+                    <h3 class="counter" data-target="45">0</h3>
+                    <p>Day Average Closing</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE PROPS SECTION -->
+        <section class="value-props section-padding">
+            <div class="container">
+                <div class="value-prop-item fade-in-scroll">
+                    <div class="value-prop-text">
+                        <span class="eyebrow">01</span>
+                        <h2>Direct Buyer, Direct Close.</h2>
+                        <p>We are the principal acquirer, not an intermediary. This means no broker chains, no extra fees, and a direct line of communication, ensuring a streamlined and transparent transaction from start to finish.</p>
+                    </div>
+                    <div class="value-prop-img">
+                        <img src="media/the1.avif" alt="Close-up of solar panels.">
+                    </div>
+                </div>
+                <div class="value-prop-item reverse fade-in-scroll">
+                    <div class="value-prop-text">
+                        <span class="eyebrow">02</span>
+                        <h2>Certainty of Execution.</h2>
+                        <p>Our offers are based on committed capital. We remove the financing contingencies that cause delays and kill deals. When we make an offer, we are prepared to close—swiftly and certainly.</p>
+                    </div>
+                     <div class="value-prop-img">
+                        <img src="media/the2.jpg" alt="Solar farm technology infrastructure.">
+                    </div>
+                </div>
+                 <div class="value-prop-item fade-in-scroll">
+                    <div class="value-prop-text">
+                        <span class="eyebrow">03</span>
+                        <h2>Confidential & Fair Valuation.</h2>
+                        <p>Your inquiry is handled with absolute discretion. We provide fair, market-based valuations derived from rigorous cash flow analysis, not guesswork. Receive a no-obligation assessment of your project's value.</p>
+                    </div>
+                     <div class="value-prop-img">
+                        <img src="media/they.avif" alt="Financial charts on a screen.">
+                    </div>
+                </div>
+                <div class="value-prop-item reverse fade-in-scroll">
+                    <div class="value-prop-text">
+                        <span class="eyebrow">04</span>
+                        <h2>Long-Term Asset Stewards.</h2>
+                        <p>We aren't brokers or flippers. We acquire projects for the long term, investing in their operational excellence and success. When you sell to us, you're passing your asset to a responsible partner.</p>
+                    </div>
+                     <div class="value-prop-img">
+                        <img src="https://source.unsplash.com/random/800x605/?renewable,energy,investment" alt="Renewable energy infrastructure.">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section class="how-it-works-home section-padding dark-section">
+            <div class="container">
+                <div class="section-title fade-in-scroll">
+                    <h2>Our 4-Step Acquisition Process</h2>
+                    <p>Simple, efficient, and built for speed.</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step fade-in-scroll">
+                        <span class="step-number">01</span>
+                        <h4>Submit Project</h4>
+                        <p>Provide basic details about your solar farm through our secure form.</p>
+                    </div>
+                    <div class="step-arrow fade-in-scroll fade-delay-1">→</div>
+                    <div class="step fade-in-scroll fade-delay-1">
+                        <span class="step-number">02</span>
+                        <h4>We Evaluate</h4>
+                        <p>Our team conducts a confidential, in-depth analysis of the asset.</p>
+                    </div>
+                    <div class="step-arrow fade-in-scroll fade-delay-2">→</div>
+                    <div class="step fade-in-scroll fade-delay-2">
+                        <span class="step-number">03</span>
+                        <h4>Receive Offer</h4>
+                        <p>We present a fair, no-obligation cash offer without financing contingencies.</p>
+                    </div>
+                    <div class="step-arrow fade-in-scroll fade-delay-3">→</div>
+                    <div class="step fade-in-scroll fade-delay-3">
+                        <span class="step-number">04</span>
+                        <h4>We Close</h4>
+                        <p>Upon acceptance, we move to a fast, efficient closing, typically within 30-60 days.</p>
+                    </div>
+                </div>
+                <div class="text-center fade-in-scroll fade-delay-4">
+                     <a href="how-it-works.html" class="btn btn-primary">See Detailed Process</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- WHY US SECTION -->
+        <section class="why-us section-padding">
+            <div class="container">
+                <div class="section-title text-center fade-in-scroll">
+                     <h2>The Repowering Partners Advantage</h2>
+                     <p>Why sell directly to us instead of using a broker or going to the public market?</p>
+                </div>
+                <div class="comparison-table fade-in-scroll">
+                    <div class="comparison-header">
+                        <div>Feature</div>
+                        <div>Repowering Partners</div>
+                        <div>Brokers / Public Market</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Closing Speed</div>
+                        <div><span class="highlight-gold">30–60 Days</span></div>
+                        <div>6–12+ Months</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Buyer Type</div>
+                        <div><span class="highlight-gold">Direct Principal Buyer</span></div>
+                        <div>Intermediary / Unvetted Buyers</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Broker Fees</div>
+                        <div><span class="highlight-gold">None</span></div>
+                        <div>1-5% of Sale Price</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Certainty</div>
+                        <div><span class="highlight-gold">High (No Financing Contingency)</span></div>
+                        <div>Low (Deals fall through)</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Confidentiality</div>
+                        <div><span class="highlight-gold">Guaranteed</span></div>
+                        <div>Public Exposure</div>
+                    </div>
+                </div>
+                 <div class="text-center fade-in-scroll">
+                     <a href="why-sell.html" class="btn btn-ghost">Learn More About Our Edge</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA SECTION -->
+        <section class="final-cta">
+            <div class="container fade-in-scroll">
+                <h2>Ready to Explore a Sale?</h2>
+                <p>Take the first step towards a fast, confidential, and profitable exit. Get your no-obligation valuation today.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="index.html" class="logo footer-logo">RP.</a>
+                    <p>Acquiring the future of energy, one solar farm at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="why-sell.html">Why Sell to Us</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><a href="mailto:Jim.bakhaus@repoweringpartners.com">Jim.bakhaus@repoweringpartners.com</a></p>
+                    <p><a href="tel:+18005551234">(800) 555-1234</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Repowering Partners. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
