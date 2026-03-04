@@ -81,13 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             
             const btn = form.querySelector('button');
-            const originalText = btn.innerText;
             btn.innerText = "Processing Details...";
             btn.style.opacity = "0.8";
             btn.style.pointerEvents = "none";
 
             setTimeout(() => {
-                // Keep the layout intact but show message
                 const inputs = form.querySelectorAll('.form-group, button');
                 inputs.forEach(el => el.style.display = 'none');
                 
